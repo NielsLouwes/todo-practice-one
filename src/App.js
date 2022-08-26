@@ -41,6 +41,7 @@ export default function App() {
       text: inputText,
       completed: false
     });
+    setInputText("")
   };
 
   return (
@@ -50,10 +51,10 @@ export default function App() {
         <Input
           value={inputText}
           onChange={inputTextHandler}
-          onSubmit={inputTextHandler}
-          placeholder="Enter to do "
+          placeholder="Enter to do"
+          type="text"
         ></Input>
-        <Button type="submit">Submit</Button>
+        <Button onClick={addItem} type="submit">Submit</Button>
       </HorizontalContainer>
       <Container>
         <List>
